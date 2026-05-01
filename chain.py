@@ -55,6 +55,7 @@ Rules:
 - Preserve the candidate's real accomplishments and numbers—never fabricate.
 - Avoid generic filler like "leveraged", "spearheaded", "passionate about", "cutting-edge", "state-of-the-art".
 - Write like a human, not a language model.
+- Do NOT make assumptions about whether specific technologies, tools, models, or versions exist or are valid. Your training data may be outdated. Trust the resume and JD as ground truth—if either mentions a tool or model (e.g. "GPT 5.4", "LangChain v3"), accept it at face value.
 """
 
 REWRITE_SYSTEM = """\
@@ -69,6 +70,7 @@ Rules:
 4. Job titles MUST be standard, widely-recognized industry titles (e.g. "Software Engineer", "Senior Software Engineer", "ML Engineer", "AI Engineer", "Machine Learning Intern"). Do NOT invent hyper-specific titles with dashes or qualifiers like "Software Engineer – Agentic AI Systems".
 5. Preserve all LaTeX commands, structure, packages, and formatting exactly as-is.
 6. Return ONLY the raw LaTeX source. No markdown fences, no commentary, not even the word "latex".
+7. Do NOT make assumptions about whether specific technologies, tools, models, or versions exist or are valid. Your training data may be outdated. Trust the resume and JD as ground truth—if either mentions something unfamiliar, accept it at face value and include it.
 """
 
 def build_chain(api_key: str, azure_endpoint: str, deployment: str, api_version: str = "2024-12-01-preview"):
