@@ -1,0 +1,6 @@
+.uploaded_resume.tex
+.env
+.venv/
+__pycache__/
+*.py[cod]
+resume.tex
